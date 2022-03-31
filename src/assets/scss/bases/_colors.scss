@@ -1,0 +1,17 @@
+$colors: (
+  0         : #000,    // Tenebrea black
+  f         : #fff,    // Auram white
+  primary   : #1e1e1e, // Theme primary
+  text      : #fff,    // Text
+  secondary : #007acc, // Theme secondary
+  warning   : #d6914e, // Orange warning
+  success   : #16825d, // Green success
+  danger    : #a62526, // Red danger
+  light     : #ebebeb, // Light gray
+  border    : #8c868a, // Border gray
+  cancel    : #6d6d6d, // Cancel gray
+);
+
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}

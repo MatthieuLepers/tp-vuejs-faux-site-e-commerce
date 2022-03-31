@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('~fonts/icomoon/icomoon.eot?ws6lg2');
+  src: url('~fonts/icomoon/icomoon.eot?ws6lg2#iefix') format('embedded-opentype'),
+       url('~fonts/icomoon/icomoon.ttf?ws6lg2') format('truetype'),
+       url('~fonts/icomoon/icomoon.woff?ws6lg2') format('woff'),
+       url('~fonts/icomoon/icomoon.svg?ws6lg2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+$icons: (
+  minimize      : ('icomoon', '\e900'),
+  maximize      : ('icomoon', '\e901'),
+  close         : ('icomoon', '\e902'),
+  check         : ('icomoon', '\e903'),
+  plus          : ('icomoon', '\e904'),
+  minus         : ('icomoon', '\e905'),
+  help          : ('icomoon', '\e906'),
+  close-round   : ('icomoon', '\e907'),
+  check-round   : ('icomoon', '\e908'),
+  help-round    : ('icomoon', '\e909'),
+  info-round    : ('icomoon', '\e90a'),
+  warning-round : ('icomoon', '\e90b'),
+  warning       : ('icomoon', '\e90c'),
+  eye           : ('icomoon', '\e90d'),
+  eye-slash     : ('icomoon', '\e90e'),
+  edit          : ('icomoon', '\e90f'),
+  copy          : ('icomoon', '\e910'),
+  delete        : ('icomoon', '\e911'),
+  reload        : ('icomoon', '\e912'),
+  import        : ('icomoon', '\e913'),
+  export        : ('icomoon', '\e914'),
+  search        : ('icomoon', '\e915'),
+  calendar      : ('icomoon', '\e916'),
+  save          : ('icomoon', '\e917'),
+  sort          : ('icomoon', '\e918'),
+  sort-asc      : ('icomoon', '\e919'),
+  sort-desc     : ('icomoon', '\e91a'),
+);
+
+@mixin icon($iconName) {
+  content: nth(map-get($icons, $iconName), 2);
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: #{nth(map-get($icons, $iconName), 1)} !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
