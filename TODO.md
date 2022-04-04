@@ -34,6 +34,7 @@ Il est tout à fait possible de réaliser ce tp à plusieurs, étant donné qu'i
 L'API REST fournis propose des méthodes POST, PUT, PATCH et DELETE qui sont factices, ainsi, si tu souhaites faire la partie bonus, je te recommande d'utiliser un store ou juste stocker l'utilisateur dans le localStorage du navigateur.
 
 ## Objectifs du TP
+
 - Créer une application e-commerce simple en utilisant l'API REST fournis plus haut
 - Rendre l'application un minimum accessible (sensibilisation normes a11y)
 - Rendre l'application mobile-first et donc responsive, largeur min : 320px
@@ -60,14 +61,15 @@ La page liste de produits répertorie tous les produits fournis par l'API REST (
 La mozaic des produits peut être afficher de deux façon :
 - en carte, les produits sont alignés sur plusieurs lignes et il y a plusieurs produits sur une même ligne
 - en liste, les produits sont affichés 2 par 2 sur plusieurs lignes et on peut y voir plus de détails comme leur description.
+L'affichage par défaut est celui en carte, un bouton type switch permet de basculer d'un afichage à un autre.
 
-L'affichage en carte permet de consulter le prix, le nom du produit et contient un bouton permettant de l'ajouter rapidement au panier.
+L'affichage en carte permet de consulter le prix, le nom du produit et contient un bouton permettant de l'ajouter rapidement au panier. En mobile on affiche toujours en carte.
 
-L'affichage en liste permet de consulter le prix, le nom ainsi qu'une description courte du produit.
+L'affichage en liste permet de consulter le prix, le nom ainsi qu'une description courte du produit. En mobile, il n'y a pas d'affichage en liste, on peut donc masquer le bouton qui permet la bascule de l'un à l'autre.
 
 Dans les deux cas, on affiche la vignette du produit.
 
-Au clic sur un produit, on redirige l'utilisateur vers la page du produit en question
+Au clic sur un produit, on redirige l'utilisateur vers la page du produit en question.
 
 ### b - Filtrage par catégories
 
